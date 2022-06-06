@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='main2.css')}}">
+</head>
+
+<body>
+    <div>
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('Prime_factorization') }}">Prime Factorization</a>
+        <a href="{{ url_for('Totient_Function_Computation') }}">Totient Function Computation</a>
+        <a href="{{ url_for('Miller_Rabin_Algorithm') }}">Miller Rabin Algorithm</a>
+        <a href="{{ url_for('Fast_Exponentiation') }}">Fast Exponentiation</a>
+        <a href="{{ url_for('Chinese_Remainder_Theorem') }}">Chinese Remainder Theorem</a>
+    </div>
+
+    <div class="form">
+        <form action="" , method="POST">
+
+            <h1>Fast Exponentiation</h1>
+
+            Enter a number of the form of a^b mod(c) <br> <br>
+
+            Enter "a" (the base): <input type="number" name="f_number" min="1"> <br>
+            Enter "b" (the exponent): <input type="number" name="f_number2" min="1"> <br>
+            Enter "c": <input type="number" name="f_number3" min="1"> <br>
+
+            <br> <br>
+
+            <b> {{ output }} </b>
+
+            <br> <br>
+
+            <button type="submit">Submit</button>
+
+            <br>
+
+            {{errorlabel}}
+
+        </form>
+        
+    </div>
+
+</body>
+
+</html>
